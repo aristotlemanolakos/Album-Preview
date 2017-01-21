@@ -23,15 +23,28 @@ header{
 	h1.logo{
 		font-weight: 900;
 		color: #494949;
-		color: #000;
-		font-size: 22px;
-		line-height: .7;
+		font-size: 20px;
+		line-height: .8;
 		span{
 			font-size: 30pt;
 			img{
 				width: 62px;
 			}
 		}
+		a#tLogo, span{
+			font-size: 30px;
+			color: #EFEFEF;
+			font-weight: 900;
+			-webkit-text-stroke: 1.75px #494949;
+			letter-spacing: 3.5px;
+			text-decoration: none;
+		}
+		a#tLogo:hover span{
+			color: #9B9B9B;
+			letter-spacing: 69px;
+			display: none;
+		}
+		a#tLogo:hover:before {content:"LOWKEY"}
 	}
 }
 div.app{

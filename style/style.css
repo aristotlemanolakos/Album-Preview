@@ -19,15 +19,31 @@ header {
 header h1.logo {
   font-weight: 900;
   color: #494949;
-  color: #000;
-  font-size: 22px;
-  line-height: .7;
+  font-size: 20px;
+  line-height: .8;
 }
 header h1.logo span {
   font-size: 30pt;
 }
 header h1.logo span img {
   width: 62px;
+}
+header h1.logo a#tLogo,
+header h1.logo span {
+  font-size: 30px;
+  color: #EFEFEF;
+  font-weight: 900;
+  -webkit-text-stroke: 1.75px #494949;
+  letter-spacing: 3.5px;
+  text-decoration: none;
+}
+header h1.logo a#tLogo:hover span {
+  color: #9B9B9B;
+  letter-spacing: 69px;
+  display: none;
+}
+header h1.logo a#tLogo:hover:before {
+  content: "LOWKEY";
 }
 div.app {
   margin: 0 auto;
