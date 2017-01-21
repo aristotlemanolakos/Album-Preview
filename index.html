@@ -7,18 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style/style.css">
     <script src="js/app.js"></script>
     <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-      <script>
-      SC.initialize({
-        client_id: 'YOUR_CLIENT_ID'
-      });
 
-      SC.get('/playlists/2050462').then(function(playlist) {
-        playlist.tracks.forEach(function(track) {
-          console.log(track.title);
-        });
-      });
-      </script>
   </head>
   <body>
 

@@ -134,8 +134,8 @@ button#gButton::before {
   top: -10px;
   left: -10px;
   z-index: -1;
-  width: 150%;
-  height: 150%;
+  width: 160%;
+  height: 160%;
   /* Background... */
   background-image: url(//upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
   background-size: 100%;

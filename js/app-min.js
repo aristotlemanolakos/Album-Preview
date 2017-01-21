@@ -1,0 +1,1 @@
+function getAlbum(){console.log("Sedonc"),SC.get("https://soundcloud.com/zensupremacy/bryan-west-x-ro-nightfall",function(n,o){IMG_URL=n.artwork,console.log(IMG_URL),document.getElementById("cA").src=IMG_URL})}console.log("Started"),window.onload=function(){SC.initialize({client_id:"JAnYYgWUxuSP6RBUBrEFgKtNldnxFhIU"}),getAlbum()};
