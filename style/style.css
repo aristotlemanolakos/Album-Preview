@@ -43,7 +43,7 @@ input[type="text"],
 input[type="url"] {
   display: block;
   border: 1px solid #D7D7D7;
-  border-radius: 11px;
+  border-radius: 7px;
   width: 270px;
   height: 32px;
   background-color: #f8f8f8;
@@ -79,6 +79,7 @@ label.lApp {
   font-weight: 100;
   color: #9B9B9B;
   font-size: 14px;
+  padding-left: 6px;
 }
 label.lPreview {
   display: block;
@@ -87,6 +88,7 @@ label.lPreview {
   margin-top: 10px;
   font-weight: 100;
   color: #494949;
+  /* REMEMBER: THIS IS WHY THE PREVIEW TEXT DOESN'T SHOW */
   display: none;
 }
 label.lPreview a {
@@ -97,7 +99,7 @@ button#gButton {
   width: 281px;
   height: 42px;
   border: none;
-  border-radius: 11px;
+  border-radius: 7px;
   background-color: #B08DC0;
   color: #fff;
   font-size: 16px;
@@ -133,16 +135,16 @@ button#gButton::before {
   /* Background... */
   background-image: url(//upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
   background-size: 100%;
-  background-position: 50% 50%;
+  background-position: 50% 60%;
   background-clip: content-box;
-  filter: blur(12px);
+  filter: blur(13px);
 }
 div.coverArt {
   background-color: #f8f8f8;
   width: 280px;
   height: 280px;
   border: 1px solid #D7D7D7;
-  border-radius: 11px;
+  border-radius: 7px;
 }
 div.coverArt img {
   margin-top: 10px;
