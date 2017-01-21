@@ -63,7 +63,7 @@ input[type="text"],
 input[type="url"] {
   display: block;
   border: 0px solid #D7D7D7;
-  border-radius: 7px;
+  border-radius: 8px;
   width: 270px;
   height: 32px;
   background-color: #EFEFEF;
@@ -119,7 +119,7 @@ button#gButton {
   width: 281px;
   height: 42px;
   border: none;
-  border-radius: 7px;
+  border-radius: 8px;
   background-color: #B08DC0;
   color: #fff;
   font-size: 16px;
@@ -164,7 +164,7 @@ div.coverArt {
   width: 280px;
   height: 280px;
   border: 0px solid #D7D7D7;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 div.coverArt img {
   margin-top: 10px;
