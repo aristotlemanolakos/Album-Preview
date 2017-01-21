@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
 }
-*:focus {
+* :focus {
   outline: none;
 }
 body {
@@ -20,9 +20,14 @@ header h1.logo {
   font-weight: 900;
   color: #494949;
   font-size: 30pt;
+  line-height: 1;
 }
 header h1.logo span {
-  font-size: 36pt;
+  font-size: 30pt;
+}
+div.app {
+  margin: 0 auto;
+  width: 280px;
 }
 div.form {
   margin: 0 auto;
@@ -34,30 +39,62 @@ form {
   display: inline-block;
   margin-top: 20px;
 }
-input[type="text"] {
+input[type="text"],
+input[type="url"] {
   display: block;
-  border: 1.5px solid #D7D7D7;
+  border: 1px solid #D7D7D7;
   border-radius: 11px;
   width: 270px;
   height: 32px;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   -webkit-appearance: none;
   font-size: 22px;
   color: #4A4A4A;
   padding: 5px;
   margin-top: 5px;
+  font-weight: 400;
 }
-label {
+input:focus {
+  border-color: #797979;
+}
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+input:focus:-moz-placeholder {
+  color: transparent;
+}
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+  color: transparent;
+}
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+  color: transparent;
+}
+/* IE 10+ */
+label.lApp {
   display: block;
   width: 280px;
   text-align: left;
-  font-weight: 600;
+  font-weight: 100;
   color: #9B9B9B;
   font-size: 14px;
 }
-button {
+label.lPreview {
   display: block;
-  width: 280px;
+  width: 100%;
+  font-size: 14px;
+  margin-top: 10px;
+  font-weight: 100;
+  color: #494949;
+  display: none;
+}
+label.lPreview a {
+  color: #4990E2;
+}
+button#gButton {
+  display: block;
+  width: 281px;
   height: 42px;
   border: none;
   border-radius: 11px;
@@ -66,26 +103,60 @@ button {
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  background: transparent;
+  /* background-image: url(https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
+
+	background-size: 200%;
+	background-position: center;
+ 
+  	-webkit-background-clip: content-box;
+  	background-clip: content-box;
+ 
+  	color: rgba(0,0,0,0);
+
+   	-webkit-filter: blur(10px);
+  	-moz-filter: blur(10px);
+  	-o-filter: blur(10px);
+  	-ms-filter: blur(10px);
+  	filter: blur(10px); */
+}
+button#gButton::before {
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  z-index: -1;
+  width: 150%;
+  height: 150%;
+  /* Background... */
+  background-image: url(//upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
+  background-size: 100%;
+  background-position: 50% 50%;
+  background-clip: content-box;
+  filter: blur(12px);
 }
 div.coverArt {
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
   width: 280px;
   height: 280px;
-  border: 1.5px solid #D7D7D7;
+  border: 1px solid #D7D7D7;
   border-radius: 11px;
-  margin-bottom: 15px;
 }
 div.coverArt img {
   margin-top: 10px;
   width: 260px;
   height: 260px;
+  border-radius: 2.5px;
 }
 footer p {
-  margin-top: 80px;
+  margin-top: 55px;
   margin-bottom: 5px;
   color: #9B9B9B;
   text-align: center;
   font-size: 12px;
+  font-weight: 100;
 }
 footer p a {
   color: #9B9B9B;

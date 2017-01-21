@@ -1,11 +1,12 @@
 *{
 	margin: 0;
 	padding: 0;
+
+	:focus {
+    outline: none;
+	}
 }
 
-*:focus {
-    outline: none;
-}
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
@@ -23,11 +24,16 @@ header{
 		font-weight: 900;
 		color: #494949;
 		font-size: 30pt;
-
+		line-height: 1;
 		span{
-			font-size: 36pt;
+			font-size: 30pt;
 		}
 	}
+}
+div.app{
+	margin: 0 auto;
+	width: 280px;
+
 }
 
 div.form{ 
@@ -43,37 +49,67 @@ form{
 	margin-top: 20px; 
 }
 
+//Variables Dawg 
+@label-text: #9B9B9B;
 @dark-text: #4A4A4A;
+@dark-border-focus: #797979;
 
-input[type="text"]{
+@border-w: 1px;
+@border-s: solid;
+@well-fill: #f8f8f8;
+
+input[type="text"], input[type="url"]{
 	display: block;
-	border: 1.5px solid #D7D7D7;
+	border: @border-w @border-s #D7D7D7;
 	border-radius: 11px;
 	width: 270px;
 	height: 32px;
-	background-color: #F8F8F8;
+	background-color: @well-fill;
 	-webkit-appearance: none;
-	//padding: 2px;
 	font-size: 22px;
 	color: @dark-text;
 	padding: 5px;
 	margin-top: 5px;
+	font-weight: 400;
 }
-@label-text: #9B9B9B;
 
-label{
+input:focus{
+		border-color: @dark-border-focus;
+	}
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+input:focus:-moz-placeholder { color:transparent; } /* FF 4-18 */
+input:focus::-moz-placeholder { color:transparent; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color:transparent; } /* IE 10+ */
+
+label.lApp{
 	display: block;
 	width: 280px;
 	text-align: left;
-	font-weight: 600;
+	font-weight: 100;
 	color: @label-text;
 	font-size: 14px;
 }
 
-button{
+label.lPreview{
 	display: block;
-	width: 280px;
+	width: 100%;
+	font-size: 14px;
+	margin-top: 10px; 
+	font-weight: 100;
+	color: #494949;
+	display: none;
+
+	a{
+		color: #4990E2;
+	}
+}
+
+button#gButton{
+	display: block;
+	width: 281px;
 	height: 42px;
+
 	border: none;
 	border-radius: 11px;
 	background-color: #B08DC0;
@@ -81,28 +117,69 @@ button{
 	font-size: 16px;
 	font-weight: 600;
 	cursor: pointer;
+	overflow: hidden;
+	position: relative;
+	background: transparent;
+
+	//Background Image Stuff Below
+	/* background-image: url(https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
+
+	background-size: 200%;
+	background-position: center;
+ 
+  	-webkit-background-clip: content-box;
+  	background-clip: content-box;
+ 
+  	color: rgba(0,0,0,0);
+
+   	-webkit-filter: blur(10px);
+  	-moz-filter: blur(10px);
+  	-o-filter: blur(10px);
+  	-ms-filter: blur(10px);
+  	filter: blur(10px); */
 }
 
+button#gButton::before{
+  	content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: -1;
+    
+    width: 150%;
+    height: 150%;
+    
+    /* Background... */
+    background-image: url(//upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
+    background-size: 100%;
+    background-position: 50% 50%;
+    background-clip: content-box;
+   	filter: blur(12px);
+}
+
+
 div.coverArt{
-	background-color: #F8F8F8;
+	background-color: @well-fill;
 	width: 280px;
 	height: 280px;
-	border: 1.5px solid #D7D7D7;
+	border: @border-w @border-s #D7D7D7;
 	border-radius: 11px;
-	margin-bottom: 15px;
+//	margin-bottom: 15px;
 	img{
 		margin-top: 10px;
 		width: 260px;
 		height: 260px;
+		border-radius: 2.5px;
 	}
 }
 
 footer p{
-	margin-top: 80px;
+	margin-top: 55px;
 	margin-bottom: 5px;
 	color: @label-text;
 	text-align: center;
 	font-size: 12px;
+	font-weight: 100;
 	a{
 		color: @label-text;
 		font-weight: 600;
