@@ -19,11 +19,15 @@ header {
 header h1.logo {
   font-weight: 900;
   color: #494949;
-  font-size: 30pt;
-  line-height: 1;
+  color: #000;
+  font-size: 22px;
+  line-height: .7;
 }
 header h1.logo span {
   font-size: 30pt;
+}
+header h1.logo span img {
+  width: 62px;
 }
 div.app {
   margin: 0 auto;
@@ -42,11 +46,11 @@ form {
 input[type="text"],
 input[type="url"] {
   display: block;
-  border: 1px solid #D7D7D7;
+  border: 0px solid #D7D7D7;
   border-radius: 7px;
   width: 270px;
   height: 32px;
-  background-color: #f8f8f8;
+  background-color: #EFEFEF;
   -webkit-appearance: none;
   font-size: 22px;
   color: #4A4A4A;
@@ -140,10 +144,10 @@ button#gButton::before {
   filter: blur(13px);
 }
 div.coverArt {
-  background-color: #f8f8f8;
+  background-color: #EFEFEF;
   width: 280px;
   height: 280px;
-  border: 1px solid #D7D7D7;
+  border: 0px solid #D7D7D7;
   border-radius: 7px;
 }
 div.coverArt img {

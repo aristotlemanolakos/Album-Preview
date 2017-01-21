@@ -23,10 +23,14 @@ header{
 	h1.logo{
 		font-weight: 900;
 		color: #494949;
-		font-size: 30pt;
-		line-height: 1;
+		color: #000;
+		font-size: 22px;
+		line-height: .7;
 		span{
 			font-size: 30pt;
+			img{
+				width: 62px;
+			}
 		}
 	}
 }
@@ -54,15 +58,19 @@ form{
 @dark-text: #4A4A4A;
 @dark-border-focus: #797979;
 
-@border-w: 1px;
+@border-w: 0px;
 @border-s: solid;
+@border-c: #D7D7D7;
+
 @border-r: 7px;
+
 @well-fill: #f8f8f8;
+@well-fill: #EFEFEF;
 
 
 input[type="text"], input[type="url"]{
 	display: block;
-	border: @border-w @border-s #D7D7D7;
+	border: @border-w @border-s @border-c;
 	border-radius: @border-r;
 	width: 270px;
 	height: 32px;
@@ -167,7 +175,7 @@ div.coverArt{
 	background-color: @well-fill;
 	width: 280px;
 	height: 280px;
-	border: @border-w @border-s #D7D7D7;
+	border: @border-w @border-s @border-c;
 	border-radius: @border-r;
 //	margin-bottom: 15px;
 	img{
