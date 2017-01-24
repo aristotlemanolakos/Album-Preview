@@ -77,6 +77,11 @@ input[type="url"] {
 input:focus {
   border-color: #797979;
 }
+::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #9b9b9b;
+  font-weight: 400;
+}
 input:focus::-webkit-input-placeholder {
   color: transparent;
 }
@@ -128,6 +133,7 @@ button#gButton {
   overflow: hidden;
   position: relative;
   background: transparent;
+  text-shadow: 0px 0px 28px rgba(0, 0, 0, 0.55);
   /* background-image: url(https://upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
 
 	background-size: 200%;
@@ -153,7 +159,7 @@ button#gButton::before {
   width: 160%;
   height: 160%;
   /* Background... */
-  background-image: url(//upload.wikimedia.org/wikipedia/en/3/35/Flume_-_Skin.png);
+  background-image: url(https://i1.sndcdn.com/artworks-000145843581-d675gg-t500x500.jpg);
   background-size: 100%;
   background-position: 50% 60%;
   background-clip: content-box;

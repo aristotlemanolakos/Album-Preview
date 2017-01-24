@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <title>API TEST</title>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.0.0.js"></script>
+
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="stylesheet" href="test-style.css">
+	<script src="https://use.fontawesome.com/b38761bf75.js"></script>
+  </head>
+
+  <body>
+    <form id="searchForm">
+      <input type="url" id="url" placeholder="Enter a track's URL" autofocus />
+    </form>
+    <div id="info">
+      <span id="title"></span>
+      <button id="play"><i class="fa fa-play" aria-hidden="true"></i></button>
+      <button id="pause"><i class="fa fa-pause" aria-hidden="true"></i></button>
+    </div>
+
+   	<script type="text/javascript">
+      SC.initialize({
+        client_id: 'JAnYYgWUxuSP6RBUBrEFgKtNldnxFhIU'
+      });
+
+      var inputField = document.getElementById('url');
+      var title = document.getElementById('title');
+      var info = document.getElementById('info');
+      var currentPlayer;
+
+      var streamTrack = function(track){
+        return SC.stream('/tracks/' + track.id).then(function(player){
+          title.innerText = track.title;
+          info.style.display = 'inline-block';
+          if (currentPlayer) {
+            currentPlayer.pause();
+          }
+          currentPlayer = player;
+
+          player.play();
+        }).catch(function(){
+          console.log(arguments);
+        });
+      };
+
+      var search = function(event){
+        event.preventDefault();
+        SC.resolve(inputField.value).then(streamTrack);
+      };
+
+      document.getElementById('searchForm').addEventListener('submit', search);
+
+      document.getElementById('pause').addEventListener('click', function(){
+        if (currentPlayer) {
+          currentPlayer.pause();
+        }
+      });
+      document.getElementById('play').addEventListener('click', function(){
+        if (currentPlayer) {
+          currentPlayer.play();
+        }
+      });
+    </script> 
+  </body>
+</html>

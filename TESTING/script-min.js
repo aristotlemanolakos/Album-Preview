@@ -1,0 +1,1 @@
+SC.initialize({client_id:"JAnYYgWUxuSP6RBUBrEFgKtNldnxFhIU"}),SC.get("https://soundcloud.com/south-of-france",{},function(t){alert("Sound URI: "+t.uri),$("#audio-test").attr("src",t.uri)});
